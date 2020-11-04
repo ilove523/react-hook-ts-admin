@@ -136,6 +136,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
+    // TODO: 这里不安全,需要处理
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();
     });
